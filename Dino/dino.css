@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    text-align: center;
+    height: 100vh;
+    background: lightblue;
+    overflow: hidden;
+    font-family: Comic Sans MS, serif;
+  }
+  
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: DarkBlue;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .m {
+    float: left;
+  }
+  
+  .m a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .m a:hover:not(.active) {
+    background-color: darkorange;
+  }
+  
+  .active {
+    background-color: red;
+  }
+  
+  .main {
+    padding: 20px;
+    margin-top: 30px;
+    height: 1500px;
+    text-align: center;
+  }
+  
+  .instruction {
+    border: 4px solid black;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+  }
+  
+  .gameArea {
+    background: url("https://cdn.glitch.me/83ca5040-54f1-4516-98aa-1bdd012ce23e/Blue%20Sky.svg?v=1640050513237")
+      no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 50px;
+    width: 800px;
+    height: 600px;
+    border: 4px solid black;
+  }
+  
+  .dino {
+    width: 200px;
+    height: 200px;
+    background: url("https://cdn.glitch.me/83ca5040-54f1-4516-98aa-1bdd012ce23e/dinosaur4-c.svg?v=1640049355513")
+      top left no-repeat;
+    position: absolute;
+    bottom: -20px;
+  }
+  
+  .cactus {
+    width: 100px;
+    height: 100px;
+    background: url("https://cdn.glitch.me/83ca5040-54f1-4516-98aa-1bdd012ce23e/cactus.png?v=1640049356321")
+      top right no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 20px;
+  }
+  
+  .scoreboard {
+    margin: 10px;
+  }
+  
