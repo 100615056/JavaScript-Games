@@ -1,5 +1,4 @@
 /* Source: https://github.com/kubowania/chrome-trex-game */
-
 document.addEventListener("DOMContentLoaded", () => {
     const dino = document.querySelector(".dino");
     const gameArea = document.querySelector(".gameArea");
