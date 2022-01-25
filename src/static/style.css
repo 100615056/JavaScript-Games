@@ -1,8 +1,8 @@
 body {
     margin: 0;
-  }
-  
-  .menu {
+}
+
+.menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -11,39 +11,39 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-  }
-  
-  .m {
+}
+
+.m {
     float: left;
-  }
-  
-  .m a {
+}
+
+.m a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  
-  .m a:hover:not(.active) {
+}
+
+.m a:hover:not(.active) {
     background-color: darkorange;
-  }
-  
-  .active {
+}
+
+.active {
     background-color: red;
-  }
-  
-  .title {
+}
+
+.title {
     padding: 20px;
     margin-top: 30px;
     background-color: khaki;
     height: 1500px;
     text-align: center;
-  }
-  
-  .games {
+}
+
+.games {
     text-align: center;
     list-style-position: inside;
     font-size: 25px;
     line-height: 2;
-  }  
+}
