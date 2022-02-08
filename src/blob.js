@@ -6,7 +6,7 @@ const ctx = canvas.getContext("2d");
 
 // Defining Variables
 let x = 400;
-let y = 300;
+let y = 250;
 let radius = 50;
 let startAngle = 0;
 let endAngle = Math.PI * 2;

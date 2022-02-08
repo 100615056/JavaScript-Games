@@ -10,19 +10,21 @@
     </head>
     <body>
         <ul class="menu">
-            <li class="m"><a class="active" href="index.html">Home</a></li>
-            <li class="m"><a href="blob.html">Blob</a></li>
-            <li class="m"><a href="dino.html">Dino</a></li>
+            <li class="menu__list">
+                <a class="active" href="index.html">Home</a>
+            </li>
+            <li class="menu__list"><a href="blob.html">Blob</a></li>
+            <li class="menu__list"><a href="dino.html">Dino</a></li>
         </ul>
 
         <div class="main">
             <h1>Colourful Blob</h1>
-            <section class="instruction">
+            <p class="instruction">
                 Use the WASD or Arrow Keys to move the blob around
-            </section>
+            </p>
         </div>
         <div class="canvas">
-            <canvas id="gameArea" width="800" height="600"></canvas>
+            <canvas id="gameArea" width="800" height="500"></canvas>
             <script src="../blob.js"></script>
         </div>
     </body>

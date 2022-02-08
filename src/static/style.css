@@ -1,5 +1,13 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    user-select: none;
+}
+
 body {
     margin: 0;
+    padding: 0;
 }
 
 .menu {
@@ -13,11 +21,11 @@ body {
     width: 100%;
 }
 
-.m {
+.menu__list {
     float: left;
 }
 
-.m a {
+.menu__list a {
     display: block;
     color: white;
     text-align: center;
@@ -25,7 +33,7 @@ body {
     text-decoration: none;
 }
 
-.m a:hover:not(.active) {
+.menu__list a:hover:not(.active) {
     background-color: darkorange;
 }
 
@@ -33,17 +41,14 @@ body {
     background-color: red;
 }
 
-.title {
-    padding: 20px;
-    margin-top: 30px;
-    background-color: khaki;
-    height: 1500px;
-    text-align: center;
+.games {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
 }
 
-.games {
-    text-align: center;
-    list-style-position: inside;
-    font-size: 25px;
-    line-height: 2;
+.games__list {
+    font-size: 2rem;
 }
