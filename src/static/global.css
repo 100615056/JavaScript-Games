@@ -5,9 +5,20 @@
     user-select: none;
 }
 
+:root {
+    --nav-clr: #00008b;
+    --home--clr: #389cb7;
+    --bkg-clr: #b1cbd4;
+    --header-clr: #2c6676;
+    --hover-clr: #ff6945;
+}
+
 body {
     margin: 0;
     padding: 0;
+    text-align: center;
+    background-color: var(--bkg-clr);
+    font-family: Comic Sans MS, serif;
 }
 
 .menu {
@@ -15,7 +26,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: DarkBlue;
+    background-color: var(--nav-clr);
     position: fixed;
     top: 0;
     width: 100%;
@@ -34,21 +45,9 @@ body {
 }
 
 .menu__list a:hover:not(.active) {
-    background-color: darkorange;
+    background-color: var(--hover-clr);
 }
 
 .active {
-    background-color: red;
-}
-
-.games {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5vh;
-}
-
-.games__list {
-    font-size: 2rem;
+    background-color: var(--home--clr);
 }

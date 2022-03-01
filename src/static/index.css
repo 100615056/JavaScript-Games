@@ -1,0 +1,13 @@
+.games {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.games__list {
+    text-align: left;
+    font-size: 2rem;
+    width: 50%;
+}

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<link rel="shortcut icon" type="image/png" href="../img/blob.png" />
+<link rel="shortcut icon" type="image/png" href="../img/snake.png" />
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="refresh" content="30" />
-        <title>Blob Game</title>
+        <title>Snake Game</title>
         <link rel="stylesheet" href="../static/global.css" />
-        <link rel="stylesheet" href="../static/blob.css" />
+        <link rel="stylesheet" href="../static/snake.css" />
     </head>
     <body>
         <ul class="menu">
@@ -19,14 +19,15 @@
         </ul>
 
         <div class="main">
-            <h1>Colourful Blob</h1>
+            <h1>Snake</h1>
             <p class="instruction">
-                Use the WASD or Arrow Keys to move the blob around
+                Use the WASD or Arrow Keys to move the snake around and eat the
+                food
             </p>
         </div>
         <div class="canvas">
-            <canvas id="gameArea" width="800" height="500"></canvas>
-            <script src="../blob.js"></script>
+            <canvas id="gameArea" width="400" height="400"></canvas>
+            <script src="../snake.js"></script>
         </div>
     </body>
 </html>
