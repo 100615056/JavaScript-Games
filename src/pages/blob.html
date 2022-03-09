@@ -10,23 +10,38 @@
         <link rel="stylesheet" href="../static/blob.css" />
     </head>
     <body>
-        <ul class="menu">
-            <li class="menu__list">
-                <a class="active" href="index.html">Home</a>
-            </li>
-            <li class="menu__list"><a href="blob.html">Blob</a></li>
-            <li class="menu__list"><a href="snake.html">Snake</a></li>
-        </ul>
-
+        <header>
+            <nav class="nav">
+                <a href="index.html" class="home">JavaScript Games</a>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="blob.html">Blob</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="snake.html">Snake</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
         <div class="main">
             <h1>Colourful Blob</h1>
             <p class="instruction">
-                Use the WASD or Arrow Keys to move the blob around
+                Use the WASD or Arrow Keys to move the blob around. <br />
+                Use the number keys to change colors
             </p>
         </div>
         <div class="canvas">
             <canvas id="gameArea" width="800" height="500"></canvas>
             <script src="../blob.js"></script>
+        </div>
+        <div>
+            <p class="colors">
+                1-Red 2-Orange 3-Yellow 4-Green 5-Blue 6-Purple 7-Pink 8-Brown
+                9-Black
+            </p>
         </div>
     </body>
 </html>

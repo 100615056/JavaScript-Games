@@ -18,6 +18,27 @@ let downPressed = false;
 let leftPressed = false;
 let rightPressed = false;
 
+let onePressed = false;
+let twoPressed = false;
+let threePressed = false;
+let fourPressed = false;
+let fivePressed = false;
+let sixPressed = false;
+let sevenPressed = false;
+let eightPressed = false;
+let ninePressed = false;
+
+// Colors
+let color1 = "#F20000";
+let color2 = "#F27D00";
+let color3 = "#F2C200";
+let color4 = "#00F20C";
+let color5 = "#0030F2";
+let color6 = "#9900F2";
+let color7 = "#F0C2EC";
+let color8 = "#871906";
+let color9 = "#000000";
+
 // Game Loop
 function drawGame() {
   requestAnimationFrame(drawGame);
@@ -66,17 +87,40 @@ function inputs() {
 function drawBlob() {
   ctx.fillStyle = "Chartreuse";
   // Change colour of blob based on input
-  if (upPressed) {
-    ctx.fillStyle = "Crimson";
+  if (one) {
+    ctx.fillStyle = color1;
   }
-  if (downPressed) {
-    ctx.fillStyle = "Cyan";
+  
+  if (two) {
+  ctx.fillStyle = color2;
   }
-  if (leftPressed) {
-    ctx.fillStyle = "Fuchsia";
+
+  if (three) {
+  ctx.fillStyle = color3;
   }
-  if (rightPressed) {
-    ctx.fillStyle = "BlueViolet";
+
+  if (four) {
+  ctx.fillStyle = color4;
+  }
+
+  if (five) {
+  ctx.fillStyle = color5;
+  }
+
+  if (six) {
+  ctx.fillStyle = color6;
+  }
+
+  if (seven) {
+  ctx.fillStyle = color7;
+  }
+
+  if (eight) {
+  ctx.fillStyle = color8;
+  }
+
+  if (nine) {
+  ctx.fillStyle = color9;
   }
   // Draw Sprite
   ctx.beginPath();
@@ -85,7 +129,7 @@ function drawBlob() {
 }
 
 function clearScreen() {
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "white";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
@@ -106,6 +150,34 @@ function keyDown(event) {
   if (event.keyCode == 39 || event.keyCode == 68) {
     rightPressed = true;
   }
+  // Colors
+  if (event.keyCode == 49){
+    one = true;
+  }
+  if (event.keyCode == 50){
+    two = true;
+  }
+  if (event.keyCode == 51){
+    three = true;
+  }
+  if (event.keyCode == 52){
+    four = true;
+  }
+  if (event.keyCode == 53){
+    five = true;
+  }
+  if (event.keyCode == 54){
+    six = true;
+  }
+  if (event.keyCode == 55){
+    seven = true;
+  }
+  if (event.keyCode == 56){
+    eight = true;
+  }
+  if (event.keyCode == 57){
+    nine = true;
+  }
 }
 
 function keyUp(event) {
@@ -120,6 +192,34 @@ function keyUp(event) {
   }
   if (event.keyCode == 39 || event.keyCode == 68) {
     rightPressed = false;
+  }
+  // Colors
+  if (event.keyCode == 49){
+    one = false;
+  }
+  if (event.keyCode == 50){
+    two = false;
+  }
+  if (event.keyCode == 51){
+    three = false;
+  }
+  if (event.keyCode == 52){
+    four = false;
+  }
+  if (event.keyCode == 53){
+    five = false;
+  }
+  if (event.keyCode == 54){
+    six = false;
+  }
+  if (event.keyCode == 55){
+    seven = false;
+  }
+  if (event.keyCode == 56){
+    eight = false;
+  }
+  if (event.keyCode == 57){
+    nine = false;
   }
 }
 

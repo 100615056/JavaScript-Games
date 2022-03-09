@@ -1,7 +1,5 @@
 .main {
-    margin-top: 5vh;
     display: flex;
-    min-height: 5vh;
     flex-direction: column;
     align-items: center;
 }
@@ -21,4 +19,10 @@
 
 #gameArea {
     border: 4px solid Chartreuse;
+}
+
+.colors {
+    display: inline-block;
+    word-spacing: 1rem;
+    border: 4px solid black;
 }
