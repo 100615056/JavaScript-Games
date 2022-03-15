@@ -7,7 +7,6 @@
         <meta http-equiv="refresh" content="30" />
         <title>Snake Game</title>
         <link rel="stylesheet" href="../static/global.css" />
-        <link rel="stylesheet" href="../static/snake.css" />
     </head>
     <body>
         <header>
@@ -23,6 +22,9 @@
                     <li class="nav__item">
                         <a class="nav__link" href="snake.html">Snake</a>
                     </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="target.html">Target</a>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -35,7 +37,7 @@
             </p>
         </div>
         <div class="canvas">
-            <canvas id="gameArea" width="400" height="400"></canvas>
+            <canvas id="gameArea" class="snake" width="400" height="400"></canvas>
             <script src="../snake.js"></script>
         </div>
     </body>

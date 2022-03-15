@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<link rel="shortcut icon" type="image/png" href="../img/JavaScript-logo.png" />
+<link rel="shortcut icon" type="image/png" href="../img/blob.png" />
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Javascript Games</title>
+        <meta http-equiv="refresh" content="30" />
+        <title>Target Blast</title>
         <link rel="stylesheet" href="../static/global.css" />
     </head>
     <body>
@@ -27,26 +28,16 @@
                 </ul>
             </nav>
         </header>
-        <div class="games">
-            <h1>
-                Check out the Javascript Games by clicking on the menu above!
-            </h1>
-            <ul class="games__list">
-                <li>
-                    <b>Blob:</b> Move the player around and watch the sprite
-                    change colours
-                </li>
-                <li>
-                    <b>Snake: </b>Move the player around to try and eat the
-                    food.
-                    <ul>
-                        <li>
-                            Avoid running into the edges of the screen or
-                            crashing into your own snake body
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+        <div class="main">
+            <h1>Target Blast</h1>
+            <p class="instruction">
+                Use the WASD or Arrow Keys to move the player around. <br />
+                Fire at the targets using the space key.
+            </p>
+        </div>
+        <div class="canvas">
+            <canvas id="gameArea" class="target" width="550" height="600"></canvas>
+            <script src="../target.js"></script>
         </div>
     </body>
 </html>
