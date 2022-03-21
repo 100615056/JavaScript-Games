@@ -1,8 +1,6 @@
-// Reference to our canvas by using id from HTML file
-const canvas = document.getElementById("gameArea");
-
-// Getting context to draw on the canvas
-const ctx = canvas.getContext("2d");
+// Reference canvas and get context
+const canvas = document.getElementById('gameArea');
+const ctx = canvas.getContext('2d');
 
 // Defining Variables
 let x = 400;
@@ -29,15 +27,15 @@ let eightPressed = false;
 let ninePressed = false;
 
 // Colors
-let color1 = "#F20000";
-let color2 = "#F27D00";
-let color3 = "#F2C200";
-let color4 = "#00F20C";
-let color5 = "#0030F2";
-let color6 = "#9900F2";
-let color7 = "#F0C2EC";
-let color8 = "#871906";
-let color9 = "#000000";
+const color1 = "#F20000";
+const color2 = "#F27D00";
+const color3 = "#F2C200";
+const color4 = "#00F20C";
+const color5 = "#0030F2";
+const color6 = "#9900F2";
+const color7 = "#F0C2EC";
+const color8 = "#871906";
+const color9 = "#000000";
 
 // Game Loop
 function drawGame() {
@@ -87,39 +85,39 @@ function inputs() {
 function drawBlob() {
   ctx.fillStyle = "Chartreuse";
   // Change colour of blob based on input
-  if (one) {
+  if (onePressed) {
     ctx.fillStyle = color1;
   }
   
-  if (two) {
+  if (twoPressed) {
   ctx.fillStyle = color2;
   }
 
-  if (three) {
+  if (threePressed) {
   ctx.fillStyle = color3;
   }
 
-  if (four) {
+  if (fourPressed) {
   ctx.fillStyle = color4;
   }
 
-  if (five) {
+  if (fivePressed) {
   ctx.fillStyle = color5;
   }
 
-  if (six) {
+  if (sixPressed) {
   ctx.fillStyle = color6;
   }
 
-  if (seven) {
+  if (sevenPressed) {
   ctx.fillStyle = color7;
   }
 
-  if (eight) {
+  if (eightPressed) {
   ctx.fillStyle = color8;
   }
 
-  if (nine) {
+  if (ninePressed) {
   ctx.fillStyle = color9;
   }
   // Draw Sprite
@@ -152,31 +150,31 @@ function keyDown(event) {
   }
   // Colors
   if (event.keyCode == 49){
-    one = true;
+    onePressed = true;
   }
   if (event.keyCode == 50){
-    two = true;
+    twoPressed = true;
   }
   if (event.keyCode == 51){
-    three = true;
+    threePressed = true;
   }
   if (event.keyCode == 52){
-    four = true;
+    fourPressed = true;
   }
   if (event.keyCode == 53){
-    five = true;
+    fivePressed = true;
   }
   if (event.keyCode == 54){
-    six = true;
+    sixPressed = true;
   }
   if (event.keyCode == 55){
-    seven = true;
+    sevenPressed = true;
   }
   if (event.keyCode == 56){
-    eight = true;
+    eightPressed = true;
   }
   if (event.keyCode == 57){
-    nine = true;
+    ninePressed = true;
   }
 }
 
@@ -195,32 +193,33 @@ function keyUp(event) {
   }
   // Colors
   if (event.keyCode == 49){
-    one = false;
+    onePressed = false;
   }
   if (event.keyCode == 50){
-    two = false;
+    twoPressed = false;
   }
   if (event.keyCode == 51){
-    three = false;
+    threePressed = false;
   }
   if (event.keyCode == 52){
-    four = false;
+    fourPressed = false;
   }
   if (event.keyCode == 53){
-    five = false;
+    fivePressed = false;
   }
   if (event.keyCode == 54){
-    six = false;
+    sixPressed = false;
   }
   if (event.keyCode == 55){
-    seven = false;
+    sevenPressed = false;
   }
   if (event.keyCode == 56){
-    eight = false;
+    eightPressed = false;
   }
   if (event.keyCode == 57){
-    nine = false;
+    ninePressed = false;
   }
 }
+
 
 drawGame();
