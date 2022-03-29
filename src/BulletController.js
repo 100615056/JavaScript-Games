@@ -28,6 +28,16 @@ export default class BulletController {
         });
     }
 
+    collideWith(sprite) {
+        return this.bullets.some(bullet => {
+            if (bullet.collideWith(sprite)) {
+                this.bullets.splice(this.bullets.indexOf(bullet), 1);
+                return true;
+            }
+            return false;
+        });
+    }
+
     isBulletOffScreen(bullet) {
         return bullet.y <= -bullet.height;
     }

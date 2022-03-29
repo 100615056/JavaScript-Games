@@ -16,7 +16,7 @@ export default class Player {
         this.move();
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle);
-        ctx.fillStyle = "#FF8784";
+        ctx.fillStyle = "#00c3b0";
         ctx.fill();
         ctx.lineWidth = 2;
         ctx.strokeStyle = "#F9F871";
@@ -30,7 +30,7 @@ export default class Player {
             const speed = 5;
             const delay = 7;
             const damage = 1;
-            const bulletX = this.x + this.radius / 30;
+            const bulletX = this.x - this.radius / 8;
             const bulletY = this.y;
             this.bulletController.shoot(bulletX, bulletY, speed, damage, delay);
         }
