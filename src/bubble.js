@@ -12,9 +12,15 @@ canvas.height = 600;
 
 const bulletController = new BulletController(canvas);
 
-    const colors = ['#004E73', '#EB9929', '#795D9D'];
-const start = 60;
-const gap = 110;
+const player = new Player(
+    canvas.width / 2.2,
+    canvas.height / 1.3,
+    bulletController
+);
+
+const colors = ['#004E73', '#EB9929', '#795D9D'];
+const start = 50;
+const gap = 100;
 const rowY = [50, 150];
 const rowX = [start, start + gap, start + 2 * gap, start + 3 * gap, start + 4 * gap]
 
@@ -31,12 +37,6 @@ const enemies = [
     new Enemy(rowX[4], rowY[1], colors[1], 20),
 ];
 
-const player = new Player(
-    canvas.width / 2.2,
-    canvas.height / 1.3,
-    bulletController
-);
-
 function gameLoop () {
     clearScreen();
     bulletController.draw(ctx);
@@ -47,8 +47,7 @@ function gameLoop () {
                 const index = enemies.indexOf(enemy);
                 enemies.splice(index, 1);
             }
-        }
-        else {
+        } else {
             enemy.draw(ctx);
         }
     });

@@ -10,8 +10,10 @@ export default class BulletController {
 
     shoot(x, y, speed, damage, delay) {
         if (this.timerTillNextBullet <= 0) {
-            this.bullets.push(new Bullet(x, y, speed, damage));
-            
+            //  Max number of bullets at a time
+            if(this.bullets.length < 5) {
+                this.bullets.push(new Bullet(x, y, speed, damage));
+            }
             this.timerTillNextBullet = delay;
     }
     
@@ -39,6 +41,7 @@ export default class BulletController {
     }
 
     isBulletOffScreen(bullet) {
+        // Remove bullet after passing edge of screen
         return bullet.y <= -bullet.height;
     }
 }

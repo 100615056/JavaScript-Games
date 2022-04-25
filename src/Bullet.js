@@ -5,34 +5,29 @@ export default class Bullet {
         this.speed = speed;
         this.damage = damage;
     
-        this.radius = 5;
-        this.startAngle = 0;
-        this.endAngle = Math.PI * 2;
+        this.width = 5;
+        this.height = 15;
         this.color = "#00baff";
     
     }
 
     draw(ctx) {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle);
         ctx.fillStyle = this.color;
-        ctx.fill();
         this.y -= this.speed;
+        ctx.fillRect(this.x, this.y, this.width, this.height);
     }
 
+    // Source: https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
     collideWith(sprite) {
-        var dx = (this.x + this.radius) - (sprite.x + sprite.radius);
-        var dy = (this.y + this.radius) - (sprite.y + sprite.radius);
-        var distance = Math.sqrt(dx * dx + dy * dy);
-
-        if (distance < this.radius + sprite.radius) {
-            // Collision detected!
-            this.color = 'green';
-        } 
-
-        else {
-            // no collision
-            this.color = 'blue';
+        if (
+            this.x < sprite.x + sprite.width &&
+            this.x + this.width > sprite.x &&
+            this.y < sprite.y + sprite.height &&
+            this.y + this.height > sprite.y
+        ) {
+            sprite.takeDamage(this.damage);
+            return true;
         }
+        return false;
     }
 }
