@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<link rel="shortcut icon" type="image/png" href="../img/bubbles.png" />
+<link rel="shortcut icon" type="image/png" href="../img/pong.png" />
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="refresh" content="30" />
-        <title>Bubble Blast</title>
+        <title>Pong Game</title>
         <link rel="stylesheet" href="../static/global.css" />
     </head>
     <body>
@@ -31,21 +31,22 @@
                 </ul>
             </nav>
         </header>
+
         <div class="main">
-            <h1>Target Blast</h1>
+            <h1>Pong</h1>
             <p class="instruction">
-                Use the Arrow Keys to move the player around. <br />
-                Fire at the targets using the space key.
+                Use the Arrow Keys to move the paddle and score against the
+                computer
             </p>
         </div>
         <div class="canvas">
             <canvas
                 id="gameArea"
-                class="target"
-                width="550"
-                height="600"
+                class="pong"
+                width="600"
+                height="400"
             ></canvas>
-            <script src="../target.js" type="module"></script>
+            <script src="../pong.js"></script>
         </div>
     </body>
 </html>

@@ -164,9 +164,9 @@ function drawSnake() {
 
 function moveSnake() {
     // Move snake head in x-direction
-    headX = headX + xVelocity;
+    headX += xVelocity;
     // Move snake head in y-direction
-    headY = headY + yVelocity;
+    headY += yVelocity;
 }
 
 
@@ -177,7 +177,7 @@ function drawApple() {
 
 
 function foodCollision() {
-    if (appleX === headX && appleY == headY) {
+    if (appleX === headX && appleY === headY) {
         // Move apple to random position on collision
         appleX = Math.floor(Math.random() * tileCount);
         appleY = Math.floor(Math.random() * tileCount);

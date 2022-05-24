@@ -119,3 +119,8 @@ header {
 .target {
     border: 4px solid black;
 }
+
+/* Pong */
+.pong {
+    border: 4px solid white;
+}

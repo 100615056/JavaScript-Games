@@ -15,9 +15,8 @@ export default class BulletController {
                 this.bullets.push(new Bullet(x, y, speed, damage));
             }
             this.timerTillNextBullet = delay;
-    }
-    
-    this.timerTillNextBullet--;
+        }
+        this.timerTillNextBullet--;
     }
 
     draw(ctx) {
