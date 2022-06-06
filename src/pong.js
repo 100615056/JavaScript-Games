@@ -2,13 +2,16 @@
 const canvas = document.getElementById('gameArea');
 const ctx = canvas.getContext('2d');
 
-pi = Math.PI;
+// Variables 
+const pi = Math.PI;
+// Colors
 const background = 'black';
 const user_clr = 'red';
 const com_clr = 'blue';
 const ball_clr = 'white';
 const net_clr = 'yellow';
 
+let ball_speed = 7;
 // Player
 const user = {
     x: 0,
@@ -36,7 +39,7 @@ const ball = {
     radius: 10,
     xVelocity: 5,
     yVelocity: 5,
-    speed: 7,
+    speed: ball_speed,
     color: ball_clr
 };
 
@@ -51,6 +54,7 @@ const net = {
 
 // Main Loop
 function main() {
+    update();
     drawing();
     requestAnimationFrame(main);
 }
@@ -92,7 +96,7 @@ function drawing() {
     // User Score
     drawText(canvas.width / 4, canvas.height / 5, user.score, user_clr);
     // Computer Score
-    drawText(3*canvas.width / 4, canvas.height / 5, user.score, com_clr);
+    drawText(3*canvas.width / 4, canvas.height / 5, com.score, com_clr);
     // Net
     drawNet();
     // Player
@@ -103,6 +107,7 @@ function drawing() {
     drawBall(ball.x, ball.y, ball.radius, ball.color);
 }
 
+// Controlling the user's paddle
 canvas.addEventListener("mousemove", getMousePos);
 
 function getMousePos(evt) {
@@ -114,11 +119,10 @@ function getMousePos(evt) {
 function move() {
     ball.x += ball.xVelocity;
     ball.y += ball.yVelocity;
-
 }
 
 function computer_move() {
-    com.y += ((ball.y - (com.y + com.height / 2))) * 0.1;
+    com.y += ((ball.y - (com.y + com.height / 2))) * 0.05;
 }
 
 function boundary() {
@@ -149,9 +153,31 @@ function collision(ball, paddle) {
     return paddle.left < ball.right && paddle.top < ball.bottom && paddle.right > ball.left && paddle.bottom > ball.top;
 }
 
+function resetBall() {
+    ball.x = canvas.width / 2;
+    ball.y = canvas.height / 2;
+    ball.xVelocity = -ball.xVelocity;
+    ball.speed = ball_speed;
+}
+
+function score() {
+    // Computer Score
+    if (ball.x - ball.radius < 0) {
+        com.score++;
+        resetBall();
+    }
+    else if (ball.x + ball.radius > canvas.width) {
+        user.score++;
+        resetBall();
+    }
+}
+
 function update() {
+    // Score
+    score();
     // Motion of the ball
     move();
+    // Computer's movement
     computer_move();
     boundary();
     // Check if Player paddle or Computer paddle
